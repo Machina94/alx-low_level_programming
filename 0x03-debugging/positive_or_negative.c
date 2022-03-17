@@ -1,24 +1,17 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
-/* more headers goes there */
-
 /**
-* main - entry point
+* positive_or_negative: prints if integer is positive, negative or zero
+* @i: integer to check
 *
-* Return: 0 if success
+* void: 0 if success
 */
-int main(void)
-{int n;
-
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
+void positive_or_negative(int i)
+{
 	/* your code goes there */
-	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n == 0)
-		printf("%d is zero\n", n);
+	if (i > 0)
+		printf("%d is positive\n", i);
+	else if (i == 0)
+		printf("%d is zero\n", i);
 	else
-		printf("%d is negative\n", n);
-	return (0);
+		printf("%d is negative\n", i);
 }
