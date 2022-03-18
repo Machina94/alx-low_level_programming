@@ -1,9 +1,7 @@
 #include "main.h"
-
 /**
- * print_number - prints n integer
- * @n: the number to print
- * void: nothing to return
+ * print_number - prints number
+ * @n: integer to be printed
  */
 void print_number(int n)
 {
@@ -22,5 +20,5 @@ void print_number(int n)
 	{
 		print_number(j / 10);
 	}
-	_putchar(j % 10 + '0');
+	_putchar((j % 10) + '0');
 }
