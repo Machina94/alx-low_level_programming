@@ -2,25 +2,25 @@
 #include <string.h>
 
 /**
- * _strncpy - copies a string.
- * @dest: the destination string
- * @src: the source string
- * @n: number of bytes from src
+ * _strcmp - compares two strings.
+ * @s1: the first string
+ * @s2: the second string
+ *
  * Return: the copied string
  */
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int i, lenDest;
+	int status, i;
 
-	lenDest = strlen(dest);
-
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	status = 0;
+	for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
 	{
-		if (n < lenDest)
-			dest[i] = src[i];
+		if (s1[i] != s2[i])
+		{
+			status = s1[i] - s2[i];
+			break;
+		}
 	}
-	for ( ; i < n; i++)
-		dest[i] = '\0';
 
-	return (dest);
+	return (status);
 }
