@@ -1,6 +1,5 @@
 #include "lists.h"
 
-
 /**
  * print_list - print counter all elements of `list_t` list
  * @h: head of linked list
